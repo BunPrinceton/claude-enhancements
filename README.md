@@ -16,6 +16,14 @@ Run multiple Claude instances simultaneously on the same project for 3-4x faster
 - **`PARALLEL_SESSION_TEMPLATE.md`** - Reusable session planner
 - **`start_parallel_claudes.sh`** - Automated launcher for 4 parallel Claudes
 
+### 🏷️ Version Control Setup
+Establish proper versioning across all your repositories for easy rollback and better Claude coordination.
+
+- **`VERSIONING_SETUP_GUIDE.md`** - Complete guide to version control setup
+- **`setup_versioning.sh`** - Automated setup script for repos
+- **`templates/VERSION_CONTROL.md`** - Template guide for Claude instances
+- **`templates/claude_section.md`** - README section template
+
 ### 🔐 GitHub Integration
 - **`GITHUB_AUTH_GUIDE.md`** - Complete GitHub CLI setup and authentication guide
 
@@ -27,6 +35,22 @@ Run multiple Claude instances simultaneously on the same project for 3-4x faster
 ```bash
 cd ~/Documents/claude-enhancements
 ./start_parallel_claudes.sh ~/Documents/your-project
+```
+
+### Setup Version Control for a Repo
+```bash
+cd ~/Documents/claude-enhancements
+./setup_versioning.sh setup ~/Documents/your-project v0.1.0 "Initial setup"
+```
+
+### Setup Version Control for All Repos
+```bash
+./setup_versioning.sh setup-all ~/Documents
+```
+
+### Audit Versioning Status
+```bash
+./setup_versioning.sh audit ~/Documents
 ```
 
 ### Or Manually (4 terminals)
@@ -309,8 +333,13 @@ sudo chown -R $USER ~/.config
 ├── PARALLEL_CLAUDE_WORKFLOW.md        # Complete guide (17 sections)
 ├── QUICK_START_PARALLEL.md            # Quick reference
 ├── PARALLEL_SESSION_TEMPLATE.md       # Reusable session planner
+├── VERSIONING_SETUP_GUIDE.md          # Version control setup guide
 ├── GITHUB_AUTH_GUIDE.md               # GitHub CLI setup
-└── start_parallel_claudes.sh          # Auto-launcher script
+├── start_parallel_claudes.sh          # Auto-launcher script
+├── setup_versioning.sh                # Version control setup script
+└── templates/
+    ├── VERSION_CONTROL.md             # Template for .github/
+    └── claude_section.md              # Template for README sections
 ```
 
 ---
@@ -343,6 +372,13 @@ gh pr create --title "Parallel Session $(date +%Y-%m-%d)" \
 ---
 
 ## 📝 Version History
+
+- **v1.1** (Nov 9, 2025) - Version control system
+  - Complete versioning setup guide
+  - Automated setup script for all repos
+  - Templates for VERSION_CONTROL.md
+  - Auditing tools
+  - Applied to 20 repositories (1.7/10 → 6-7/10 average score)
 
 - **v1.0** (Nov 6, 2025) - Initial release
   - Parallel development workflow
